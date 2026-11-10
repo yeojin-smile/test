@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A부 국회 요구자료 · 배분</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2312355b'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='34' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="lib/tabulator.min.css">
+  <style>
+    :root{--ink:#182230;--muted:#667085;--line:#d8e1e8;--panel:#fff;--bg:#f3f6f9;--navy:#12355b;--blue:#1769aa;--mint:#0f8a78;--orange:#b45309;--red:#b42318;--soft:#eaf2f8;--radius:16px;font-family:"Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink);background:var(--bg)}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(180deg,#eef4f8 0,#f7f9fb 360px,var(--bg) 100%)}button,input,select{font:inherit}a{color:inherit}
+    .app-nav{height:72px;padding:0 max(24px,calc((100vw - 1440px)/2));display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(12px);position:sticky;top:0;z-index:30}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:var(--navy)}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--navy);color:white}.nav-links{display:flex;gap:5px}.nav-link{border:0;background:transparent;text-decoration:none;padding:10px 13px;border-radius:10px;color:#475467;font:inherit;font-weight:700;display:flex;align-items:center;gap:6px}.nav-link.is-active{background:var(--soft);color:var(--navy)}.nav-link.is-future{opacity:.52}.nav-link small{font-size:10px;color:#7b8794}
+    main{width:min(1440px,calc(100% - 36px));margin:0 auto;padding:34px 0 80px}.page-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:24px}.page-head h1{margin:0 0 8px;font-size:34px;letter-spacing:-.035em;color:#102a43}.page-head p{margin:0;color:var(--muted)}.head-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:flex-end}.save-note{padding:10px 14px;border-radius:12px;background:#fff;border:1px solid var(--line);font-size:13px;color:#475467}.reset-button{border:1px solid #e6b7b2;background:#fff7f6;color:#9f231b;border-radius:10px;padding:9px 12px;font:inherit;font-size:13px;font-weight:800;cursor:pointer;transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .2s}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 14px 40px rgba(35,62,83,.07);margin-bottom:22px;overflow:hidden}.panel-head{padding:22px 24px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;border-bottom:1px solid #edf1f4}.panel-title{display:flex;gap:12px}.step{flex:0 0 30px;height:30px;display:grid;place-items:center;border-radius:9px;background:var(--navy);color:white;font-weight:900}.panel h2{margin:1px 0 5px;font-size:20px}.panel-head p{margin:0;color:var(--muted);font-size:14px}.panel-body{padding:22px 24px}
+    .upload-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.upload-card{border:1px dashed #aebfcd;border-radius:14px;padding:18px;background:#f9fbfc;min-height:128px}.upload-card b{display:block;margin-bottom:5px}.upload-card p{margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.5}.file-control{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.file-control input{max-width:100%;font-size:13px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .button{border:1px solid transparent;border-radius:10px;padding:10px 15px;font-weight:800;cursor:pointer;transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .2s}.button.primary{background:var(--navy);color:#fff}.button.secondary{background:#fff;border-color:#b9c7d3;color:var(--navy)}.button.success{background:var(--mint);color:#fff}.button:disabled{opacity:.46;cursor:not-allowed}.button:active{transform:scale(.96)}
+    .message{margin-top:14px;padding:11px 13px;border-radius:10px;background:#edf4f8;color:var(--navy);font-size:14px}.message[data-kind="success"]{background:#e8f6f2;color:#087364}.message[data-kind="error"]{background:#fff0ee;color:var(--red)}.progress-wrap{margin-top:14px}.progress-wrap progress{width:100%;height:8px;accent-color:var(--blue)}.progress-meta{display:flex;justify-content:space-between;margin-top:5px;color:var(--muted);font-size:12px}
+    .check-grid{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.check-chip{padding:7px 10px;border-radius:999px;background:#eef7f4;color:#087364;border:1px solid #c8e7df;font-size:12px;font-weight:800}.check-chip.bad{background:#fff0ee;color:var(--red);border-color:#f3c7c2}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;font-size:13px}th{position:sticky;top:0;background:#edf3f7;color:#344054;text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);white-space:nowrap;z-index:1}td{padding:12px;border-bottom:1px solid #e8edf1;vertical-align:top;line-height:1.5}tbody tr:last-child td{border-bottom:0}.preview-table{min-width:1000px}.assign-table{min-width:1360px}.muted{color:var(--muted)}.item-title{font-weight:800;color:#263b4e}.subtext{display:block;margin-top:4px;color:var(--muted);font-size:12px}.note{display:block;margin-top:5px;color:var(--orange)}
+    .state{display:inline-flex;padding:5px 8px;border-radius:999px;background:#fff4e5;color:#9a4f00;font-size:12px;font-weight:900;white-space:nowrap}.state.done{background:#e7f6f1;color:#087364}.candidates{display:grid;gap:6px;min-width:210px}.candidate{padding:7px 9px;border-radius:9px;background:#f3f7fa;border:1px solid #dce6ed}.candidate b{color:var(--navy)}.candidate small{display:block;color:var(--muted);margin-top:2px}.rank{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;background:var(--navy);color:white;font-size:11px;margin-right:5px}.no-candidate{color:var(--red);font-weight:800}
+    select{width:100%;min-width:160px;border:1px solid #b8c5d0;border-radius:9px;padding:9px;background:#fff;color:var(--ink)}select[multiple]{min-width:190px;height:106px;padding:4px}select option{padding:5px}.confirm-cell{min-width:118px}.method{display:block;margin-top:7px;font-size:12px;color:var(--muted)}
+    .summary{display:flex;gap:10px}.summary span{padding:8px 11px;border-radius:10px;background:#f3f6f8;color:#475467;font-size:13px}.summary b{color:var(--navy)}
+    .assign-tools{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:14px}.search-field{display:grid;gap:5px;min-width:min(420px,100%);flex:1}.search-field span{font-size:13px;font-weight:800;color:#475467}.search-field input{width:100%;border:1px solid #b8c5d0;border-radius:10px;padding:10px 12px;background:#fff}.search-result{font-size:13px;color:var(--muted);min-width:86px}.tabulator{border:1px solid var(--line);border-radius:12px;background:#fff;font-size:13px}.tabulator .tabulator-header{background:#edf3f7;color:#344054;border-bottom:1px solid var(--line)}.tabulator .tabulator-header .tabulator-col{background:#edf3f7}.tabulator .tabulator-row{border-bottom:1px solid #e8edf1;animation:row-in .34s cubic-bezier(.2,.7,.2,1) both}.tabulator .tabulator-row .tabulator-cell{padding:12px;white-space:normal;overflow:visible;line-height:1.5}.tabulator .tabulator-footer{background:#f8fafc}.tabulator .tabulator-page{border-radius:8px}.tabulator .tabulator-page.active{background:var(--navy);color:white}.tabulator-placeholder{color:var(--muted)}
+    tbody tr{animation:row-in .34s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--row-index,0) * 18ms)}@keyframes row-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
+    @media(hover:hover) and (pointer:fine){.button:not(:disabled):hover,.reset-button:hover{transform:translateY(-2px)}.reset-button:hover{background:#ffebe8}.nav-link:not(.is-future):hover{background:#f1f5f8}tbody tr:hover{background:#fbfdfe}}
+    :focus-visible{outline:3px solid #72b6e6;outline-offset:3px}
+    @media(max-width:820px){.app-nav{height:auto;padding:12px 18px;align-items:flex-start;gap:10px}.brand span:last-child{display:none}.nav-links{max-width:72vw;overflow-x:auto}.nav-link{white-space:nowrap}.page-head{align-items:flex-start;flex-direction:column}.upload-grid{grid-template-columns:1fr}.panel-body,.panel-head{padding-left:16px;padding-right:16px}.summary{flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <header data-app-nav></header>
+  <main>
+    <div class="page-head">
+      <div><h1>요구자료 접수·배분</h1><p>PDF 문항을 확인하고 배분 후보의 근거를 본 뒤 담당 과를 확정합니다.</p></div>
+      <div class="head-actions"><div class="save-note">● 이 브라우저에 자동 저장</div><button class="reset-button" id="reset-data" type="button">저장 자료 초기화</button></div>
+    </div>
+
+    <section class="panel" aria-labelledby="receipt-title">
+      <div class="panel-head"><div class="panel-title"><span class="step">1</span><div><h2 id="receipt-title">접수</h2><p>PDF 여러 개 또는 기존 문항목록 CSV를 불러옵니다.</p></div></div><div class="summary"><span>미리보기 <b id="preview-count">0</b>문항</span></div></div>
+      <div class="panel-body">
+        <div class="upload-grid">
+          <div class="upload-card"><b>요구서 PDF</b><p>여러 파일을 고르면 PDF.js로 글자를 읽고 문항 번호에 따라 분해합니다.</p><div class="file-control"><input id="pdf-files" type="file" accept="application/pdf,.pdf" multiple><button class="button secondary" id="read-pdf" type="button">PDF 읽기</button></div></div>
+          <div class="upload-card"><b>문항목록 CSV</b><p>파일명·위원회·의원·제출기한·문항번호·요구내용·세부항목·비고 열을 읽습니다.</p><div class="file-control"><input id="csv-file" type="file" accept="text/csv,.csv"><button class="button secondary" id="read-csv" type="button">CSV 읽기</button></div></div>
+        </div>
+        <div id="progress-wrap" class="progress-wrap" hidden><progress id="progress" max="100" value="0"></progress><div class="progress-meta"><span id="progress-text">처리 준비</span><span id="progress-number">0%</span></div></div>
+        <div id="receipt-message" class="message" hidden role="status"></div>
+        <div id="checks" class="check-grid" aria-label="PDF 문항 확인 결과"></div>
+        <div class="actions"><button class="button primary" id="register" type="button" disabled>접수 등록</button><button class="button secondary" id="clear-preview" type="button" disabled>미리보기 비우기</button></div>
+        <div class="table-wrap" style="margin-top:18px"><table class="preview-table"><thead><tr><th>파일</th><th>위원회·의원·기한</th><th>번호</th><th>요구내용</th><th>세부항목</th><th>비고</th></tr></thead><tbody id="preview-body"><tr><td colspan="6" class="muted">PDF 또는 문항목록 CSV를 선택하세요.</td></tr></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="assign-title">
+      <div class="panel-head"><div class="panel-title"><span class="step">2</span><div><h2 id="assign-title">배분</h2><p>1순위가 기본 선택됩니다. 다르게 고르면 확정방법이 ‘수정’으로 기록됩니다.</p></div></div><div class="summary"><span>접수 <b id="received-count">0</b></span><span>배분확정 <b id="assigned-count">0</b></span></div></div>
+      <div class="panel-body">
+        <div class="assign-tools"><label class="search-field" for="similar-search"><span>유사 문항 검색</span><input id="similar-search" type="search" placeholder="요구내용·의원·위원회·후보 과 검색"></label><span class="search-result" id="search-result" role="status"></span><button class="button secondary" id="export-xlsx" type="button">배분 현황 엑셀 저장</button></div>
+        <div id="assign-message" class="message" hidden role="status"></div>
+        <div id="assign-table" aria-label="접수 문항 배분표"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="lib/papaparse.min.js"></script>
+  <script src="lib/xlsx.full.min.js"></script>
+  <script src="lib/tabulator.min.js"></script>
+  <script src="common.js"></script>
+  <script src="split.js"></script>
+  <script src="engine.js"></script>
+  <script type="module">
+    import * as pdfjsLib from "./lib/pdf.min.mjs";
+    import Fuse from "./lib/fuse.min.mjs";
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "./lib/pdf.worker.min.mjs";
+
+    AppCommon.initNav("assign");
+    const elements = Object.fromEntries([
+      "pdf-files","csv-file","read-pdf","read-csv","register","clear-preview","preview-body","preview-count","checks","receipt-message","assign-message","assign-table","received-count","assigned-count","progress-wrap","progress","progress-text","progress-number","similar-search","search-result","export-xlsx"
+    ].map(id => [id, document.getElementById(id)]));
+    let previewRows = [];
+    let checks = [];
+    let cases = AppCommon.loadCases();
+    let departments = [];
+    let assignmentTable;
+    let tableReady = false;
+
+    function setProgress(value, text) {
+      elements["progress-wrap"].hidden = false;
+      elements.progress.value = value;
+      elements["progress-text"].textContent = text;
+      elements["progress-number"].textContent = `${Math.round(value)}%`;
+    }
+
+    function hideProgress() { elements["progress-wrap"].hidden = true; }
+
+    async function extractPdfText(file) {
+      const documentTask = pdfjsLib.getDocument({ data: new Uint8Array(await file.arrayBuffer()) });
+      const pdf = await documentTask.promise;
+      const pages = [];
+      for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
+        const page = await pdf.getPage(pageNumber);
+        const content = await page.getTextContent();
+        let pageText = "";
+        for (const item of content.items) {
+          if (!("str" in item)) continue;
+          pageText += item.str;
+          pageText += item.hasEOL ? "\n" : " ";
+        }
+        pages.push(pageText);
+      }
+      return pages.join("\n");
+    }
+
+    function renderChecks() {
+      elements.checks.innerHTML = checks.map(check => `<span class="check-chip ${check.일치 ? "" : "bad"}">${AppCommon.escapeHtml(check.파일명)} · ${check.뽑은문항수}문항 · 번호 ${check.번호연속 ? "연속" : "불연속"} · ${check.일치 ? "일치 O" : "일치 X"}</span>`).join("");
+    }
+
+    function renderPreview() {
+      elements["preview-count"].textContent = previewRows.length;
+      elements.register.disabled = previewRows.length === 0 || checks.some(check => !check.일치);
+      elements["clear-preview"].disabled = previewRows.length === 0;
+      if (!previewRows.length) {
+        elements["preview-body"].innerHTML = '<tr><td colspan="6" class="muted">PDF 또는 문항목록 CSV를 선택하세요.</td></tr>';
+        return;
+      }
+      elements["preview-body"].innerHTML = previewRows.map((row, index) => `<tr style="--row-index:${index}"><td><span class="item-title">${AppCommon.escapeHtml(row.파일명)}</span></td><td>${AppCommon.escapeHtml(row.위원회)}<span class="subtext">${AppCommon.escapeHtml(row.의원)} · ${AppCommon.escapeHtml(row.제출기한)}</span></td><td><b>${AppCommon.escapeHtml(row.문항번호)}</b></td><td>${AppCommon.escapeHtml(row.요구내용)}</td><td>${AppCommon.escapeHtml(row.세부항목 || "-")}</td><td>${AppCommon.escapeHtml(row.비고 || "-")}</td></tr>`).join("");
+    }
+
+    async function processPdfs() {
+      const files = [...elements["pdf-files"].files];
+      if (!files.length) return AppCommon.setMessage(elements["receipt-message"], "PDF 파일을 먼저 선택하세요.", "error");
+      try {
+        previewRows = [];
+        checks = [];
+        for (let index = 0; index < files.length; index += 1) {
+          setProgress((index / files.length) * 100, `${files[index].name} 읽는 중`);
+          const text = await extractPdfText(files[index]);
+          const result = SplitRequest.splitDocument(files[index].name, text);
+          previewRows.push(...result.rows);
+          checks.push(result.check);
+          setProgress(((index + 1) / files.length) * 100, `${index + 1}/${files.length} 파일 완료`);
+        }
+        renderChecks();
+        renderPreview();
+        AppCommon.setMessage(elements["receipt-message"], `${files.length}개 PDF에서 ${previewRows.length}문항을 읽었습니다.`, checks.every(check => check.일치) ? "success" : "error");
+      } catch (error) {
+        AppCommon.setMessage(elements["receipt-message"], error.message, "error");
+      } finally {
+        setTimeout(hideProgress, 450);
+      }
+    }
+
+    async function processCsv() {
+      const file = elements["csv-file"].files[0];
+      if (!file) return AppCommon.setMessage(elements["receipt-message"], "문항목록 CSV를 먼저 선택하세요.", "error");
+      try {
+        previewRows = SplitRequest.parseQuestionCsv(await AppCommon.readFileText(file));
+        checks = [];
+        renderChecks();
+        renderPreview();
+        AppCommon.setMessage(elements["receipt-message"], `${previewRows.length}문항을 CSV에서 읽었습니다.`, "success");
+      } catch (error) {
+        AppCommon.setMessage(elements["receipt-message"], error.message, "error");
+      }
+    }
+
+    function registerPreview() {
+      const existing = new Set(cases.map(item => item.id));
+      let added = 0;
+      for (const row of previewRows) {
+        const id = AppCommon.makeId(row);
+        if (existing.has(id)) continue;
+        const candidates = DistributionEngine.classify(row.요구내용);
+        cases.push({
+          ...row,
+          id,
+          상태: "접수",
+          후보: candidates,
+          주관과: candidates[0]?.과 || "",
+          협조과: [],
+          확정방법: "",
+          기록: [{ 일시: new Date().toISOString(), 작업: "접수" }],
+        });
+        existing.add(id);
+        added += 1;
+      }
+      AppCommon.saveCases(cases);
+      AppCommon.updateView(renderAssignments);
+      AppCommon.setMessage(elements["receipt-message"], `${added}문항을 등록했습니다.${previewRows.length - added ? ` 중복 ${previewRows.length - added}문항은 건너뛰었습니다.` : ""}`, "success");
+    }
+
+    function departmentOptions(selected, allowBlank = false) {
+      return `${allowBlank ? '<option value="">선택 필요</option>' : ""}${departments.map(department => `<option value="${AppCommon.escapeHtml(department)}" ${department === selected ? "selected" : ""}>${AppCommon.escapeHtml(department)}</option>`).join("")}`;
+    }
+
+    function candidateHtml(candidates) {
+      if (!candidates.length) return '<span class="no-candidate">일치 규칙 없음</span>';
+      return `<div class="candidates">${candidates.map((candidate, index) => `<div class="candidate"><span class="rank">${index + 1}</span><b>${AppCommon.escapeHtml(candidate.과)}</b><small>${candidate.점수.toFixed(1)}점 · ${AppCommon.escapeHtml(candidate.근거키워드.join(", "))}</small></div>`).join("")}</div>`;
+    }
+
+    function visibleCases() {
+      const query = elements["similar-search"].value.trim();
+      if (!query || !cases.length) return cases;
+      const fuse = new Fuse(cases, {
+        keys: ["요구내용", "세부항목", "비고", "의원", "위원회", "주관과", "후보.과"],
+        threshold: .36,
+        ignoreLocation: true,
+      });
+      return fuse.search(query).map(result => result.item);
+    }
+
+    function makeAssignmentTable() {
+      assignmentTable = new Tabulator(elements["assign-table"], {
+        data: [],
+        index: "id",
+        layout: "fitDataStretch",
+        pagination: true,
+        paginationSize: 20,
+        paginationSizeSelector: [10, 20, 40, true],
+        placeholder: "등록된 문항이 없습니다. 위에서 요구서를 먼저 등록하세요.",
+        columnDefaults: { headerSort: true, vertAlign: "top" },
+        columns: [
+          { title: "상태", field: "상태", width: 94, formatter: cell => `<span class="state ${cell.getValue() === "배분확정" ? "done" : ""}">${AppCommon.escapeHtml(cell.getValue())}</span>` },
+          { title: "의원·문항", field: "의원", width: 150, formatter: cell => { const item = cell.getRow().getData(); return `<span class="item-title">${AppCommon.escapeHtml(item.의원)} · ${AppCommon.escapeHtml(item.문항번호)}번</span><span class="subtext">${AppCommon.escapeHtml(item.위원회)}</span>`; } },
+          { title: "요구내용", field: "요구내용", width: 330, formatter: cell => { const item = cell.getRow().getData(); return `${AppCommon.escapeHtml(item.요구내용)}${item.세부항목 ? `<span class="subtext">${AppCommon.escapeHtml(item.세부항목)}</span>` : ""}${item.비고 ? `<span class="note">※ ${AppCommon.escapeHtml(item.비고)}</span>` : ""}`; } },
+          { title: "후보 3순위", field: "후보", width: 245, headerSort: false, formatter: cell => candidateHtml(cell.getValue() || []) },
+          { title: "주관 과", field: "주관과", width: 185, headerSort: false, formatter: cell => { const item = cell.getRow().getData(); return `<span class="muted">주관 과</span><select class="lead-select" ${item.상태 === "배분확정" ? "disabled" : ""}>${departmentOptions(item.주관과, true)}</select>`; } },
+          { title: "협조 과(복수)", field: "협조과", width: 215, headerSort: false, formatter: cell => { const item = cell.getRow().getData(); return `<span class="muted">Ctrl 또는 ⌘로 복수 선택</span><select class="support-select" multiple ${item.상태 === "배분확정" ? "disabled" : ""}>${departments.map(department => `<option value="${AppCommon.escapeHtml(department)}" ${(item.협조과 || []).includes(department) ? "selected" : ""}>${AppCommon.escapeHtml(department)}</option>`).join("")}</select>`; } },
+          { title: "확정", field: "확정방법", width: 135, headerSort: false, formatter: cell => { const item = cell.getRow().getData(); return `<button type="button" data-id="${AppCommon.escapeHtml(item.id)}" class="button ${item.상태 === "배분확정" ? "secondary" : "success"} confirm" ${item.상태 === "배분확정" ? "disabled" : ""}>${item.상태 === "배분확정" ? "확정됨" : "배분 확정"}</button>${item.확정방법 ? `<span class="method">확정방법: ${AppCommon.escapeHtml(item.확정방법)}</span>` : ""}`; } },
+        ],
+      });
+      assignmentTable.on("tableBuilt", () => {
+        tableReady = true;
+        renderAssignments();
+      });
+    }
+
+    function renderAssignments() {
+      elements["received-count"].textContent = cases.filter(item => item.상태 === "접수").length;
+      elements["assigned-count"].textContent = cases.filter(item => item.상태 === "배분확정").length;
+      const shown = visibleCases();
+      elements["search-result"].textContent = elements["similar-search"].value.trim() ? `${shown.length}/${cases.length}건` : `${cases.length}건`;
+      if (!tableReady) return;
+      assignmentTable.replaceData(shown);
+    }
+
+    elements["assign-table"].addEventListener("click", event => {
+      const button = event.target.closest(".confirm");
+      if (!button) return;
+      const row = button.closest(".tabulator-row");
+      const item = cases.find(candidate => candidate.id === button.dataset.id);
+      const lead = row.querySelector(".lead-select").value;
+      const support = [...row.querySelector(".support-select").selectedOptions].map(option => option.value).filter(department => department !== lead);
+      if (!lead) return AppCommon.setMessage(elements["assign-message"], "주관 과를 선택하세요.", "error");
+      item.주관과 = lead;
+      item.협조과 = support;
+      item.확정방법 = lead === item.후보?.[0]?.과 ? "규칙" : "수정";
+      item.상태 = "배분확정";
+      item.기록.push({ 일시: new Date().toISOString(), 작업: "배분확정", 주관과: lead, 협조과: support, 확정방법: item.확정방법 });
+      AppCommon.saveCases(cases);
+      AppCommon.updateView(renderAssignments);
+      AppCommon.setMessage(elements["assign-message"], `${item.의원} ${item.문항번호}번을 ${lead}로 배분 확정했습니다.`, "success");
+    });
+
+    elements["similar-search"].addEventListener("input", () => AppCommon.updateView(renderAssignments));
+    elements["export-xlsx"].addEventListener("click", () => {
+      if (!cases.length) return AppCommon.setMessage(elements["assign-message"], "엑셀로 저장할 문항이 없습니다.", "error");
+      const rows = cases.map(item => ({
+        파일명: item.파일명, 위원회: item.위원회, 의원: item.의원, 제출기한: item.제출기한,
+        문항번호: item.문항번호, 요구내용: item.요구내용, 세부항목: item.세부항목, 비고: item.비고,
+        상태: item.상태, 주관과: item.주관과, 협조과: (item.협조과 || []).join(", "),
+        확정방법: item.확정방법, 후보: (item.후보 || []).map(candidate => candidate.과).join(" > "),
+      }));
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(rows), "배분현황");
+      XLSX.writeFile(workbook, `배분현황_${new Date().toISOString().slice(0, 10)}.xlsx`);
+      AppCommon.setMessage(elements["assign-message"], `${rows.length}문항의 배분 현황 엑셀을 저장했습니다.`, "success");
+    });
+
+    elements["read-pdf"].addEventListener("click", processPdfs);
+    elements["pdf-files"].addEventListener("change", processPdfs);
+    elements["read-csv"].addEventListener("click", processCsv);
+    elements["csv-file"].addEventListener("change", processCsv);
+    elements.register.addEventListener("click", registerPreview);
+    elements["clear-preview"].addEventListener("click", () => { previewRows = []; checks = []; renderChecks(); renderPreview(); AppCommon.setMessage(elements["receipt-message"], "미리보기를 비웠습니다."); });
+    document.getElementById("reset-data").addEventListener("click", () => {
+      const savedCount = cases.length;
+      const previewCount = previewRows.length;
+      if (!savedCount && !previewCount) {
+        AppCommon.setMessage(elements["assign-message"], "초기화할 저장 자료나 미리보기가 없습니다.");
+        return;
+      }
+      if (!confirm(`저장된 ${savedCount}개 문항과 현재 미리보기 ${previewCount}개를 모두 삭제할까요? 이 작업은 되돌릴 수 없습니다.`)) return;
+      AppCommon.clearCases();
+      cases = [];
+      previewRows = [];
+      checks = [];
+      elements["pdf-files"].value = "";
+      elements["csv-file"].value = "";
+      elements["similar-search"].value = "";
+      renderChecks();
+      AppCommon.updateView(() => { renderPreview(); renderAssignments(); });
+      AppCommon.setMessage(elements["receipt-message"], "저장 자료와 미리보기를 초기화했습니다.", "success");
+      AppCommon.setMessage(elements["assign-message"], "등록·배분 기록이 0건으로 초기화됐습니다.", "success");
+    });
+
+    try {
+      await DistributionEngine.init();
+      departments = (await AppCommon.fetchCsv("data/A부_조직도_26개과.csv")).map(row => row.과.trim());
+      makeAssignmentTable();
+    } catch (error) {
+      AppCommon.setMessage(elements["assign-message"], `${error.message} http://localhost:8000에서 열었는지 확인하세요.`, "error");
+    }
+    renderPreview();
+  </script>
+</body>
+</html>
