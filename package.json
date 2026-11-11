@@ -1,0 +1,12 @@
+{
+  "name": "parliament-common-tool",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node test_api.js",
+    "test:validate": "node test_validate.js"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.9.0"
+  }
+}

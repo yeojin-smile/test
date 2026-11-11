@@ -10,12 +10,13 @@
     *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 85% 0,#dceaf3 0,transparent 28rem),var(--bg)}
     a{color:inherit}.app-nav{height:72px;padding:0 max(24px,calc((100vw - 1180px)/2));display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(12px);position:sticky;top:0;z-index:20}
     .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:var(--navy)}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--navy);color:white}
-    .nav-links{display:flex;gap:5px}.nav-link{border:0;background:transparent;text-decoration:none;padding:10px 13px;border-radius:10px;color:#475467;font:inherit;font-weight:700;display:flex;align-items:center;gap:6px}.nav-link.is-active{background:var(--soft);color:var(--navy)}.nav-link.is-future{opacity:.52}.nav-link small{font-size:10px;color:#7b8794}
+    .nav-links{display:flex;gap:5px}.nav-link{border:0;background:transparent;text-decoration:none;padding:10px 13px;border-radius:10px;color:#475467;font:inherit;font-weight:700;display:flex;align-items:center;gap:6px}.nav-link.is-active{background:var(--soft);color:var(--navy)}.nav-link.is-future{opacity:.52}.nav-link small{font-size:10px;color:#7b8794}.storage-badge{align-self:center;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:800;white-space:nowrap}.storage-badge.server{background:#e8f6f2;color:#087364}.storage-badge.local{background:#fff4e5;color:#9a4f00}
     main{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:62px 0 80px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid #b9ccdc;border-radius:999px;color:var(--navy);font-size:13px;font-weight:800;background:#ffffffb8}.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--mint)}
     h1{font-size:clamp(34px,5vw,60px);line-height:1.08;letter-spacing:-.045em;margin:22px 0 16px;max-width:760px;color:#102a43}.lead{font-size:18px;line-height:1.7;color:var(--muted);max-width:720px;margin:0}
     .dashboard{display:grid;grid-template-columns:1.4fr .9fr;gap:22px;margin-top:46px}.panel{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 18px 50px rgba(30,60,90,.08)}
     .panel h2{font-size:20px;margin:0 0 6px}.panel-intro{margin:0 0 22px;color:var(--muted)}.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{padding:18px;border-radius:14px;background:#f7fafc;border:1px solid #e3eaf0}.stat strong{display:block;font-size:30px;color:var(--navy);margin-bottom:5px}.stat span{font-size:13px;color:var(--muted)}.chart-wrap{height:170px;margin:18px 0 0;padding:12px;border:1px solid #e3eaf0;border-radius:14px;background:#fbfdfe}.chart-wrap canvas{max-height:144px}
     .primary-action{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px;border-radius:16px;background:linear-gradient(135deg,var(--navy),#1f5f8b);color:white;text-decoration:none;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}.primary-action strong{display:block;font-size:20px;margin-bottom:7px}.primary-action span{color:#d7e6f2;font-size:14px}.arrow{font-size:30px}.home-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:13px}.reset-button{border:1px solid #e6b7b2;background:#fff7f6;color:#9f231b;border-radius:10px;padding:9px 12px;font:inherit;font-size:13px;font-weight:800;cursor:pointer;transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .2s}.reset-status{color:var(--muted);font-size:13px}.steps{margin:0;padding:0;list-style:none;display:grid;gap:12px}.steps li{display:flex;gap:13px;align-items:flex-start;padding:13px;border-radius:13px;background:#f8fafc}.step-no{flex:0 0 28px;height:28px;display:grid;place-items:center;border-radius:9px;background:var(--soft);color:var(--navy);font-weight:900}.steps b{display:block;margin-bottom:3px}.steps small{color:var(--muted);line-height:1.5}
+    .log-panel{margin-top:22px}.log-heading{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.log-heading h2{margin:0;font-size:20px}.log-count{font-size:13px;font-weight:700;color:var(--muted)}.log-tools{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:18px 0 14px}.log-tools select,.log-tools input{min-height:40px;border:1px solid #b8c5d0;border-radius:10px;padding:8px 11px;background:#fff;color:var(--ink);font:inherit}.log-tools input{min-width:220px;flex:1}.log-export{min-height:40px;padding:9px 13px;border:1px solid #b9c7d3;border-radius:10px;background:var(--navy);color:#fff;font:inherit;font-size:13px;font-weight:800;cursor:pointer}.log-table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px;background:#fff}.log-table{width:100%;min-width:760px;border-collapse:collapse;font-size:13px}.log-table th{position:sticky;top:0;background:#edf3f7;color:#344054;text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);white-space:nowrap}.log-table td{padding:11px 12px;border-bottom:1px solid #e8edf1;vertical-align:top;line-height:1.5}.log-empty{padding:26px;text-align:center;color:var(--muted)}
     [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1)}[data-reveal].show{opacity:1;transform:none}
     @media(hover:hover) and (pointer:fine){.primary-action:hover{transform:translateY(-4px)}.reset-button:hover{background:#ffebe8;transform:translateY(-2px)}.nav-link:not(.is-future):hover{background:#f1f5f8}}
     :focus-visible{outline:3px solid #72b6e6;outline-offset:3px}
@@ -29,7 +30,7 @@
     <div data-reveal>
       <span class="eyebrow">총괄 담당 업무 화면</span>
       <h1>요구서 접수부터<br>배분 확정까지 한곳에서</h1>
-      <p class="lead">PDF를 문항 단위로 나누고, 보강된 배분기준표의 후보를 확인한 뒤 담당 과를 확정합니다. 모든 기록은 현재 이 브라우저에만 저장됩니다.</p>
+      <p class="lead">PDF를 문항 단위로 나누고, 배분기준표 후보를 확인한 뒤 담당 과를 확정합니다. 저장 위치는 상단 표시를 확인하세요.</p>
     </div>
     <div class="dashboard">
       <section class="panel" data-reveal>
@@ -56,15 +57,76 @@
         </ol>
       </section>
     </div>
+    <section class="panel log-panel" aria-labelledby="log-title">
+      <div class="log-heading"><h2 id="log-title">처리 기록</h2><span class="log-count" id="log-count" aria-live="polite">0건 / 전체 0건</span></div>
+      <div class="log-tools" aria-label="처리 기록 골라 보기">
+        <select id="log-task" aria-label="작업 골라 보기"><option value="">전체 작업</option></select>
+        <select id="log-department" aria-label="과 골라 보기"><option value="">전체 과</option></select>
+        <input id="log-item-prefix" type="search" placeholder="문항 앞부분 입력" aria-label="문항 앞부분 일치">
+        <button class="log-export" id="export-log" type="button">처리 기록 엑셀</button>
+      </div>
+      <div class="log-table-wrap" id="log-table" aria-live="polite"><div class="log-empty">처리 기록을 불러오는 중입니다.</div></div>
+    </section>
   </main>
   <script src="lib/papaparse.min.js"></script>
+  <script src="lib/xlsx.full.min.js"></script>
   <script src="lib/chart.umd.js"></script>
+  <script src="flow.js"></script>
   <script src="common.js"></script>
+  <script src="log.js"></script>
   <script>
     AppCommon.initNav("index");
     let statusChart;
-    function renderCounts() {
-      const cases = AppCommon.loadCases();
+    let processingDb = { cases: [], log: [] };
+    let visibleLogEntries = [];
+    const logTask = document.querySelector("#log-task");
+    const logDepartment = document.querySelector("#log-department");
+    const logItemPrefix = document.querySelector("#log-item-prefix");
+    const logCount = document.querySelector("#log-count");
+    const logTable = document.querySelector("#log-table");
+
+    function setOptions(select, values, allLabel) {
+      const previous = select.value;
+      const options = [new Option(allLabel, ""), ...values.map(value => new Option(value, value))];
+      select.replaceChildren(...options);
+      if (values.includes(previous)) select.value = previous;
+    }
+
+    function getFilteredLogEntries() {
+      return LogView.filterEntries(processingDb.log, processingDb.cases, {
+        작업: logTask.value,
+        과: logDepartment.value,
+        문항: logItemPrefix.value.trim()
+      });
+    }
+
+    function renderLogTable() {
+      visibleLogEntries = getFilteredLogEntries();
+      logCount.textContent = visibleLogEntries.length + "건 / 전체 " + processingDb.log.length + "건";
+      if (!visibleLogEntries.length) {
+        logTable.innerHTML = '<div class="log-empty">조건에 맞는 처리 기록이 없습니다.</div>';
+        return;
+      }
+      const rows = visibleLogEntries.map(entry => "<tr>" +
+        "<td>" + AppCommon.escapeHtml(LogView.formatKoreanTime(entry.일시)) + "</td>" +
+        "<td>" + AppCommon.escapeHtml(entry.작업) + "</td>" +
+        "<td>" + AppCommon.escapeHtml(entry.문항) + "</td>" +
+        "<td>" + AppCommon.escapeHtml(entry.과) + "</td>" +
+        "<td>" + AppCommon.escapeHtml(entry.지금상태) + "</td></tr>").join("");
+      logTable.innerHTML = '<table class="log-table"><thead><tr><th>일시</th><th>작업</th><th>문항</th><th>과</th><th>지금 상태</th></tr></thead><tbody>' + rows + "</tbody></table>";
+    }
+
+    async function renderProcessingRecords() {
+      processingDb = await AppCommon.loadDb();
+      const tasks = [...new Set(processingDb.log.map(entry => String(entry.작업 || "")).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ko"));
+      const departments = [...new Set(processingDb.log.map(entry => String(entry.과 || "")).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ko"));
+      setOptions(logTask, tasks, "전체 작업");
+      setOptions(logDepartment, departments, "전체 과");
+      renderLogTable();
+    }
+
+    async function renderCounts() {
+      const cases = await AppCommon.getCases();
       const received = cases.filter(item => item.상태 === "접수").length;
       const assigned = cases.filter(item => item.상태 === "배분확정").length;
       document.querySelector("#total-count").textContent = cases.length;
@@ -82,17 +144,36 @@
         });
       }
     }
-    renderCounts();
-    document.querySelector("#reset-data").addEventListener("click", () => {
-      const count = AppCommon.loadCases().length;
+    renderCounts().catch(error => { document.querySelector("#reset-status").textContent = error.message; });
+    renderProcessingRecords().catch(error => { logTable.innerHTML = '<div class="log-empty">' + AppCommon.escapeHtml(error.message) + "</div>"; });
+    window.addEventListener("cases-saved", () => {
+      renderCounts().catch(() => {});
+      renderProcessingRecords().catch(error => { logTable.innerHTML = '<div class="log-empty">' + AppCommon.escapeHtml(error.message) + "</div>"; });
+    });
+    logTask.addEventListener("change", () => AppCommon.updateView(renderLogTable));
+    logDepartment.addEventListener("change", () => AppCommon.updateView(renderLogTable));
+    logItemPrefix.addEventListener("input", () => AppCommon.updateView(renderLogTable));
+    document.querySelector("#export-log").addEventListener("click", () => {
+      visibleLogEntries = getFilteredLogEntries();
+      const workbook = XLSX.utils.book_new();
+      const worksheet = XLSX.utils.aoa_to_sheet(LogView.worksheetRows(visibleLogEntries));
+      XLSX.utils.book_append_sheet(workbook, worksheet, "처리 기록");
+      XLSX.writeFile(workbook, "처리기록_국회요구자료.xlsx");
+    });
+    document.querySelector("#reset-data").addEventListener("click", async () => {
+      const count = (await AppCommon.getCases()).length;
       if (!count) {
         document.querySelector("#reset-status").textContent = "초기화할 저장 자료가 없습니다.";
         return;
       }
       if (!confirm(`이 브라우저에 저장된 ${count}개 문항과 배분 기록을 모두 삭제할까요? 이 작업은 되돌릴 수 없습니다.`)) return;
-      AppCommon.clearCases();
-      AppCommon.updateView(renderCounts);
-      document.querySelector("#reset-status").textContent = "저장 자료를 초기화했습니다.";
+      try {
+        AppCommon.clearCases();
+        await AppCommon.updateView(renderCounts);
+        document.querySelector("#reset-status").textContent = "저장 자료를 초기화했습니다.";
+      } catch (error) {
+        document.querySelector("#reset-status").textContent = error.message;
+      }
     });
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
       const observer = new IntersectionObserver(entries => entries.forEach(entry => {

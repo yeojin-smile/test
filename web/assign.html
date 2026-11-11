@@ -17,12 +17,14 @@
     .message{margin-top:14px;padding:11px 13px;border-radius:10px;background:#edf4f8;color:var(--navy);font-size:14px}.message[data-kind="success"]{background:#e8f6f2;color:#087364}.message[data-kind="error"]{background:#fff0ee;color:var(--red)}.progress-wrap{margin-top:14px}.progress-wrap progress{width:100%;height:8px;accent-color:var(--blue)}.progress-meta{display:flex;justify-content:space-between;margin-top:5px;color:var(--muted);font-size:12px}
     .check-grid{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.check-chip{padding:7px 10px;border-radius:999px;background:#eef7f4;color:#087364;border:1px solid #c8e7df;font-size:12px;font-weight:800}.check-chip.bad{background:#fff0ee;color:var(--red);border-color:#f3c7c2}
     .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;font-size:13px}th{position:sticky;top:0;background:#edf3f7;color:#344054;text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);white-space:nowrap;z-index:1}td{padding:12px;border-bottom:1px solid #e8edf1;vertical-align:top;line-height:1.5}tbody tr:last-child td{border-bottom:0}.preview-table{min-width:1000px}.assign-table{min-width:1360px}.muted{color:var(--muted)}.item-title{font-weight:800;color:#263b4e}.subtext{display:block;margin-top:4px;color:var(--muted);font-size:12px}.note{display:block;margin-top:5px;color:var(--orange)}
-    .state{display:inline-flex;padding:5px 8px;border-radius:999px;background:#fff4e5;color:#9a4f00;font-size:12px;font-weight:900;white-space:nowrap}.state.done{background:#e7f6f1;color:#087364}.candidates{display:grid;gap:6px;min-width:210px}.candidate{padding:7px 9px;border-radius:9px;background:#f3f7fa;border:1px solid #dce6ed}.candidate b{color:var(--navy)}.candidate small{display:block;color:var(--muted);margin-top:2px}.rank{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;background:var(--navy);color:white;font-size:11px;margin-right:5px}.no-candidate{color:var(--red);font-weight:800}
+    .state{display:inline-flex;padding:5px 8px;border-radius:999px;background:#fff4e5;color:#9a4f00;font-size:12px;font-weight:900;white-space:nowrap}.state.done{background:#e7f6f1;color:#087364}.candidates{display:grid;gap:6px;min-width:210px}.candidate{padding:7px 9px;border-radius:9px;background:#f3f7fa;border:1px solid #dce6ed}.candidate.ai{background:#f2edff;border-color:#c9b8f4}.candidate.ai .rank{background:#6741a5}.candidate b{color:var(--navy)}.candidate small{display:block;color:var(--muted);margin-top:2px}.rank{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;background:var(--navy);color:white;font-size:11px;margin-right:5px}.no-candidate{color:var(--red);font-weight:800}
     select{width:100%;min-width:160px;border:1px solid #b8c5d0;border-radius:9px;padding:9px;background:#fff;color:var(--ink)}select[multiple]{min-width:190px;height:106px;padding:4px}select option{padding:5px}.confirm-cell{min-width:118px}.method{display:block;margin-top:7px;font-size:12px;color:var(--muted)}
     .summary{display:flex;gap:10px}.summary span{padding:8px 11px;border-radius:10px;background:#f3f6f8;color:#475467;font-size:13px}.summary b{color:var(--navy)}
     .assign-tools{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:14px}.search-field{display:grid;gap:5px;min-width:min(420px,100%);flex:1}.search-field span{font-size:13px;font-weight:800;color:#475467}.search-field input{width:100%;border:1px solid #b8c5d0;border-radius:10px;padding:10px 12px;background:#fff}.search-result{font-size:13px;color:var(--muted);min-width:86px}.tabulator{border:1px solid var(--line);border-radius:12px;background:#fff;font-size:13px}.tabulator .tabulator-header{background:#edf3f7;color:#344054;border-bottom:1px solid var(--line)}.tabulator .tabulator-header .tabulator-col{background:#edf3f7}.tabulator .tabulator-row{border-bottom:1px solid #e8edf1;animation:row-in .34s cubic-bezier(.2,.7,.2,1) both}.tabulator .tabulator-row .tabulator-cell{padding:12px;white-space:normal;overflow:visible;line-height:1.5}.tabulator .tabulator-footer{background:#f8fafc}.tabulator .tabulator-page{border-radius:8px}.tabulator .tabulator-page.active{background:var(--navy);color:white}.tabulator-placeholder{color:var(--muted)}
     tbody tr{animation:row-in .34s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--row-index,0) * 18ms)}@keyframes row-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
     @media(hover:hover) and (pointer:fine){.button:not(:disabled):hover,.reset-button:hover{transform:translateY(-2px)}.reset-button:hover{background:#ffebe8}.nav-link:not(.is-future):hover{background:#f1f5f8}tbody tr:hover{background:#fbfdfe}}
+    .storage-badge{align-self:center;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:800;white-space:nowrap}.storage-badge.server{background:#e8f6f2;color:#087364}.storage-badge.local{background:#fff4e5;color:#9a4f00}
+    .history-box{margin-top:8px;padding:9px;border-radius:9px;background:#fbfdfe;border:1px solid #e4edf2;font-size:12px;line-height:1.5}.history-box b{color:var(--navy)}.history-box ul{padding-left:17px;margin:5px 0 0}.history-box li+li{margin-top:4px}.reassign-info{color:var(--orange);font-size:12px;line-height:1.5}
     :focus-visible{outline:3px solid #72b6e6;outline-offset:3px}
     @media(max-width:820px){.app-nav{height:auto;padding:12px 18px;align-items:flex-start;gap:10px}.brand span:last-child{display:none}.nav-links{max-width:72vw;overflow-x:auto}.nav-link{white-space:nowrap}.page-head{align-items:flex-start;flex-direction:column}.upload-grid{grid-template-columns:1fr}.panel-body,.panel-head{padding-left:16px;padding-right:16px}.summary{flex-wrap:wrap}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -33,7 +35,7 @@
   <main>
     <div class="page-head">
       <div><h1>요구자료 접수·배분</h1><p>PDF 문항을 확인하고 배분 후보의 근거를 본 뒤 담당 과를 확정합니다.</p></div>
-      <div class="head-actions"><div class="save-note">● 이 브라우저에 자동 저장</div><button class="reset-button" id="reset-data" type="button">저장 자료 초기화</button></div>
+      <div class="head-actions"><div class="save-note">● 저장 위치는 상단에 표시됩니다</div><button class="reset-button" id="reset-data" type="button">저장 자료 초기화</button></div>
     </div>
 
     <section class="panel" aria-labelledby="receipt-title">
@@ -64,6 +66,7 @@
   <script src="lib/papaparse.min.js"></script>
   <script src="lib/xlsx.full.min.js"></script>
   <script src="lib/tabulator.min.js"></script>
+  <script src="flow.js"></script>
   <script src="common.js"></script>
   <script src="split.js"></script>
   <script src="engine.js"></script>
@@ -78,8 +81,9 @@
     ].map(id => [id, document.getElementById(id)]));
     let previewRows = [];
     let checks = [];
-    let cases = AppCommon.loadCases();
+    let cases = [];
     let departments = [];
+    let historyRows = [];
     let assignmentTable;
     let tableReady = false;
 
@@ -163,27 +167,18 @@
       }
     }
 
-    function registerPreview() {
+    async function registerPreview() {
       const existing = new Set(cases.map(item => item.id));
       let added = 0;
       for (const row of previewRows) {
         const id = AppCommon.makeId(row);
         if (existing.has(id)) continue;
         const candidates = DistributionEngine.classify(row.요구내용);
-        cases.push({
-          ...row,
-          id,
-          상태: "접수",
-          후보: candidates,
-          주관과: candidates[0]?.과 || "",
-          협조과: [],
-          확정방법: "",
-          기록: [{ 일시: new Date().toISOString(), 작업: "접수" }],
-        });
+        const { db } = await AppCommon.applyFlow(cases, { 작업: "접수", ...row, id, 후보: candidates }, departments);
+        cases = db.cases;
         existing.add(id);
         added += 1;
       }
-      AppCommon.saveCases(cases);
       AppCommon.updateView(renderAssignments);
       AppCommon.setMessage(elements["receipt-message"], `${added}문항을 등록했습니다.${previewRows.length - added ? ` 중복 ${previewRows.length - added}문항은 건너뛰었습니다.` : ""}`, "success");
     }
@@ -192,9 +187,13 @@
       return `${allowBlank ? '<option value="">선택 필요</option>' : ""}${departments.map(department => `<option value="${AppCommon.escapeHtml(department)}" ${department === selected ? "selected" : ""}>${AppCommon.escapeHtml(department)}</option>`).join("")}`;
     }
 
-    function candidateHtml(candidates) {
+    function candidateHtml(candidates, item) {
       if (!candidates.length) return '<span class="no-candidate">일치 규칙 없음</span>';
-      return `<div class="candidates">${candidates.map((candidate, index) => `<div class="candidate"><span class="rank">${index + 1}</span><b>${AppCommon.escapeHtml(candidate.과)}</b><small>${candidate.점수.toFixed(1)}점 · ${AppCommon.escapeHtml(candidate.근거키워드.join(", "))}</small></div>`).join("")}</div>`;
+      const history = AppCommon.findHistory(candidates[0]?.근거키워드 || [], historyRows);
+      const recent = history.recent.length
+        ? `<ul>${history.recent.map(row => `<li>${AppCommon.escapeHtml(row.접수일)} · ${AppCommon.escapeHtml(row.배분과)} · ${AppCommon.escapeHtml(row.요구내용)}</li>`).join("")}</ul>`
+        : "<small>해당 키워드가 든 과거 요구가 없습니다.</small>";
+      return `<div class="candidates">${candidates.map((candidate, index) => `<div class="candidate ${candidate.출처 === "AI" ? "ai" : ""}"><span class="rank">${index + 1}</span><b>${AppCommon.escapeHtml(candidate.과)}${candidate.출처 === "AI" ? " · AI" : ""}</b><small>${candidate.출처 === "AI" ? AppCommon.escapeHtml(candidate.근거) : `${Number(candidate.점수 || 0).toFixed(1)}점 · ${AppCommon.escapeHtml((candidate.근거키워드 || []).join(", "))}`}</small></div>`).join("")}${candidates[0]?.출처 === "AI" ? "" : `<div class="history-box"><b>과거 이력 · ${history.count}건 · 주로 ${AppCommon.escapeHtml(history.department)}</b>${recent}</div>`}</div>`;
     }
 
     function visibleCases() {
@@ -222,10 +221,11 @@
           { title: "상태", field: "상태", width: 94, formatter: cell => `<span class="state ${cell.getValue() === "배분확정" ? "done" : ""}">${AppCommon.escapeHtml(cell.getValue())}</span>` },
           { title: "의원·문항", field: "의원", width: 150, formatter: cell => { const item = cell.getRow().getData(); return `<span class="item-title">${AppCommon.escapeHtml(item.의원)} · ${AppCommon.escapeHtml(item.문항번호)}번</span><span class="subtext">${AppCommon.escapeHtml(item.위원회)}</span>`; } },
           { title: "요구내용", field: "요구내용", width: 330, formatter: cell => { const item = cell.getRow().getData(); return `${AppCommon.escapeHtml(item.요구내용)}${item.세부항목 ? `<span class="subtext">${AppCommon.escapeHtml(item.세부항목)}</span>` : ""}${item.비고 ? `<span class="note">※ ${AppCommon.escapeHtml(item.비고)}</span>` : ""}`; } },
-          { title: "후보 3순위", field: "후보", width: 245, headerSort: false, formatter: cell => candidateHtml(cell.getValue() || []) },
+          { title: "후보·과거 이력", field: "후보", width: 340, headerSort: false, formatter: cell => { const item = cell.getRow().getData(); const candidates = cell.getValue() || []; const button = !candidates.length && item.상태 !== "배분확정" ? `<button type="button" class="button secondary ai-recommend" data-id="${AppCommon.escapeHtml(item.id)}">AI 추천</button>` : ""; return `${candidateHtml(candidates, item)}${button}`; } },
+          { title: "재배정 요청", field: "재배정", width: 190, headerSort: false, formatter: cell => { const item = cell.getRow().getData(); return item.상태 === "재배정요청" && item.재배정 ? `<span class="reassign-info"><b>${AppCommon.escapeHtml(item.재배정.과)}</b>: ${AppCommon.escapeHtml(item.재배정.사유)}${item.재배정.희망과 ? `<br>희망 과: ${AppCommon.escapeHtml(item.재배정.희망과)}` : ""}</span>` : ""; } },
           { title: "주관 과", field: "주관과", width: 185, headerSort: false, formatter: cell => { const item = cell.getRow().getData(); return `<span class="muted">주관 과</span><select class="lead-select" ${item.상태 === "배분확정" ? "disabled" : ""}>${departmentOptions(item.주관과, true)}</select>`; } },
           { title: "협조 과(복수)", field: "협조과", width: 215, headerSort: false, formatter: cell => { const item = cell.getRow().getData(); return `<span class="muted">Ctrl 또는 ⌘로 복수 선택</span><select class="support-select" multiple ${item.상태 === "배분확정" ? "disabled" : ""}>${departments.map(department => `<option value="${AppCommon.escapeHtml(department)}" ${(item.협조과 || []).includes(department) ? "selected" : ""}>${AppCommon.escapeHtml(department)}</option>`).join("")}</select>`; } },
-          { title: "확정", field: "확정방법", width: 135, headerSort: false, formatter: cell => { const item = cell.getRow().getData(); return `<button type="button" data-id="${AppCommon.escapeHtml(item.id)}" class="button ${item.상태 === "배분확정" ? "secondary" : "success"} confirm" ${item.상태 === "배분확정" ? "disabled" : ""}>${item.상태 === "배분확정" ? "확정됨" : "배분 확정"}</button>${item.확정방법 ? `<span class="method">확정방법: ${AppCommon.escapeHtml(item.확정방법)}</span>` : ""}`; } },
+          { title: "확정", field: "확정방법", width: 135, headerSort: false, formatter: cell => { const item = cell.getRow().getData(); const locked = item.상태 === "배분확정"; const label = locked ? "확정됨" : item.상태 === "재배정요청" ? "다시 배분" : "배분 확정"; return `<button type="button" data-id="${AppCommon.escapeHtml(item.id)}" class="button ${locked ? "secondary" : "success"} confirm" ${locked ? "disabled" : ""}>${label}</button>${item.확정방법 ? `<span class="method">확정방법: ${AppCommon.escapeHtml(item.확정방법)}</span>` : ""}`; } },
         ],
       });
       assignmentTable.on("tableBuilt", () => {
@@ -243,7 +243,26 @@
       assignmentTable.replaceData(shown);
     }
 
-    elements["assign-table"].addEventListener("click", event => {
+    elements["assign-table"].addEventListener("click", async event => {
+      const aiButton = event.target.closest(".ai-recommend");
+      if (aiButton) {
+        const item = cases.find(candidate => candidate.id === aiButton.dataset.id);
+        if (!item) return;
+        aiButton.disabled = true;
+        aiButton.textContent = "추천 중…";
+        try {
+          const result = await AppCommon.recommendAI(item.요구내용);
+          const candidates = (result.후보 || []).map(candidate => ({ ...candidate, 출처: "AI" }));
+          cases = cases.map(candidate => candidate.id === item.id ? { ...candidate, 후보: candidates } : candidate);
+          AppCommon.updateView(renderAssignments);
+          AppCommon.setMessage(elements["assign-message"], result.해당없음 ? "AI 추천 결과가 없습니다. 조직도와 요구내용을 확인하세요." : `${candidates.length}개 AI 후보를 표시했습니다. 담당 과는 직접 확인해 확정하세요.`, result.해당없음 ? "error" : "success");
+        } catch (error) {
+          aiButton.disabled = false;
+          aiButton.textContent = "AI 추천";
+          AppCommon.setMessage(elements["assign-message"], error.message, "error");
+        }
+        return;
+      }
       const button = event.target.closest(".confirm");
       if (!button) return;
       const row = button.closest(".tabulator-row");
@@ -251,14 +270,18 @@
       const lead = row.querySelector(".lead-select").value;
       const support = [...row.querySelector(".support-select").selectedOptions].map(option => option.value).filter(department => department !== lead);
       if (!lead) return AppCommon.setMessage(elements["assign-message"], "주관 과를 선택하세요.", "error");
-      item.주관과 = lead;
-      item.협조과 = support;
-      item.확정방법 = lead === item.후보?.[0]?.과 ? "규칙" : "수정";
-      item.상태 = "배분확정";
-      item.기록.push({ 일시: new Date().toISOString(), 작업: "배분확정", 주관과: lead, 협조과: support, 확정방법: item.확정방법 });
-      AppCommon.saveCases(cases);
-      AppCommon.updateView(renderAssignments);
-      AppCommon.setMessage(elements["assign-message"], `${item.의원} ${item.문항번호}번을 ${lead}로 배분 확정했습니다.`, "success");
+      const firstCandidate = item.후보?.[0];
+      const method = lead === firstCandidate?.과 && firstCandidate?.출처 === "AI"
+        ? "AI"
+        : lead === firstCandidate?.과 ? "규칙" : "수정";
+      try {
+        const { db } = await AppCommon.applyFlow(cases, { 작업: "배분", id: item.id, 주관과: lead, 협조과: support, 확정방법: method, 후보: item.후보 }, departments);
+        cases = db.cases;
+        AppCommon.updateView(renderAssignments);
+        AppCommon.setMessage(elements["assign-message"], `${item.의원} ${item.문항번호}번을 ${lead}로 배분 확정했습니다.`, "success");
+      } catch (error) {
+        AppCommon.setMessage(elements["assign-message"], error.message, "error");
+      }
     });
 
     elements["similar-search"].addEventListener("input", () => AppCommon.updateView(renderAssignments));
@@ -280,7 +303,7 @@
     elements["pdf-files"].addEventListener("change", processPdfs);
     elements["read-csv"].addEventListener("click", processCsv);
     elements["csv-file"].addEventListener("change", processCsv);
-    elements.register.addEventListener("click", registerPreview);
+    elements.register.addEventListener("click", () => registerPreview().catch(error => AppCommon.setMessage(elements["receipt-message"], error.message, "error")));
     elements["clear-preview"].addEventListener("click", () => { previewRows = []; checks = []; renderChecks(); renderPreview(); AppCommon.setMessage(elements["receipt-message"], "미리보기를 비웠습니다."); });
     document.getElementById("reset-data").addEventListener("click", () => {
       const savedCount = cases.length;
@@ -290,7 +313,7 @@
         return;
       }
       if (!confirm(`저장된 ${savedCount}개 문항과 현재 미리보기 ${previewCount}개를 모두 삭제할까요? 이 작업은 되돌릴 수 없습니다.`)) return;
-      AppCommon.clearCases();
+      try { AppCommon.clearCases(); } catch (error) { return AppCommon.setMessage(elements["assign-message"], error.message, "error"); }
       cases = [];
       previewRows = [];
       checks = [];
@@ -306,6 +329,8 @@
     try {
       await DistributionEngine.init();
       departments = (await AppCommon.fetchCsv("data/A부_조직도_26개과.csv")).map(row => row.과.trim());
+      cases = await AppCommon.getCases();
+      historyRows = await AppCommon.loadHistory();
       makeAssignmentTable();
     } catch (error) {
       AppCommon.setMessage(elements["assign-message"], `${error.message} http://localhost:8000에서 열었는지 확인하세요.`, "error");
